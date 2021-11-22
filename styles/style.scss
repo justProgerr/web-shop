@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @mixin box-flex {
     display: flex;
@@ -21,6 +22,11 @@ $h1-size: 32px;
 
 .border--pink {
     border: 1px solid $domin-color;
+}
+
+#page--active {
+    font-weight: bold;
+    color: $domin-color;
 }
 
 .text--pink {
@@ -56,6 +62,32 @@ ol {
 .container {
     width: 1140px;
     margin: 0 auto;
+}
+
+.breadcrumbs {
+
+    
+    & li {
+        display: inline-block;
+
+        & a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 14px;
+            color: #636363;
+
+            &:hover {
+                text-decoration: underline;
+                color: #000;
+            }
+        }
+
+        & + li::before {
+            content: '/ ';
+            margin: 0 5px;
+        }
+    }
 }
 
 .header {
@@ -95,8 +127,8 @@ ol {
         height: 764px;
         position: absolute;
         padding: 37px 34px;
-        top: 0%;
-        right: 0%;
+        top: 0;
+        right: 0;
         background-color: #fff;
         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 
@@ -168,8 +200,26 @@ ol {
  
 }
 
+.heading {
+    background-color: #F8F3F4;
+
+    & h2 {
+        text-transform: uppercase;
+        font-weight: normal;
+        color: #F16D7F;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0;
+    }
+}
+
 .catalog {
-    margin-top: 65px;
+    padding-top: 65px;
+    padding-bottom: 46px;
 
     &__body {
         @include box-flex;
@@ -233,11 +283,11 @@ ol {
 }
 
 .cart {
-    margin-top: 96px;
+    padding-top: 50px;
     text-align: center;
 
     &__header {
-        & h2 {
+        & h3 {
             font-weight: normal;
             font-size: 30px;
             line-height: 36px;
@@ -343,7 +393,235 @@ ol {
         background-color: $domin-color;
         color: #fff;
     }
+
+    &__filter {
+        position: relative;
+
+        &__basic {
+            text-align: initial;
+
+            & > details { 
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding: 16px;
+
+                & > summary {
+                    text-transform: uppercase;
+                    list-style: none;
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: #000000;
+                    cursor: pointer;
+                }
+
+                & svg {
+                    fill: #000;
+                    margin-left: 11px;
+                }
+
+                &[open] {
+                    z-index: 1;
+                    background: #FFFFFF;
+                    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                    width: 360px;
+
+                    & > summary {
+                        position: relative;
+                        color: #EF5B70;
+
+                        & > svg {
+                            fill: #EF5B70; 
+                        }
+                    }
+
+                }
+
+                & details {
+                    & > summary {
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        list-style: none;
+                        margin-top: 18px;
+                        padding: 12px 16px 15px;
+                        color: #6F6E6E;
+                        border-left: 5px solid #EF5B70;
+                        border-bottom: 1px solid #EBEBEB;
+                        cursor: pointer;
+
+                        &:hover {
+                            border-bottom: 1px solid #EF5B70;
+                            font-weight: bold;
+                        }
+                    }
+
+                    &[open] {
+                        & > summary {
+                            color: #EF5B70;
+                            font-weight: bold;
+                            border-bottom: 1px solid #EF5B70;
+                        }
+                    }
+
+                    & > ul {
+                        padding: 24px 16px; 
+
+                        & li {
+                            & + li {
+                                margin-top: 11px;
+                            }
+
+                            & > a {
+                                text-decoration: none;
+                                font-size: 14px;
+                                color: #6F6E6E;
+
+                                &:hover {
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__extra {
+            padding: 8px 0;
+
+            & ul {
+                list-style: none;
+
+                & > li {
+                    display: inline-block;
+                }
+
+                & details {
+                    position: relative;
+
+                    & > summary {
+                        list-style: none;
+                        padding: 9px 19px 9px 9px;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        color: #6F6E6E;
+
+                        &:hover {
+                            color: #000;
+                        }
+
+                        & > svg {
+                            margin-left: 10px;
+                        }
+                        
+                    }
+
+                    & > .details-body {
+                        text-align: left;
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        left: 0;
+                        right: 0; 
+                        background-color: #FFFFFF;
+                        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                        padding: 9px;
+                        z-index: 1;
+
+                        & input {
+                            margin-right: 9px;
+                        }
+
+                        & > label {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 14px;
+
+                            &:hover {
+                                
+                                font-weight: bold;
+                            }
+
+                            & + label {
+                                margin-top: 9px;
+                            }
+                        }
+                    }          
+                }
+            }
+        }
+    }
+
+    &__pagination {
+        margin-top: 48px;
+        display: inline-block;
+        position: relative;
+        padding: 15px 16px;
+        border: 1px solid #EBEBEB;
+
+        & > ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 28px;
+
+            & > li {
+                display: inline-block;
+
+                & + li {
+                    & > a {
+                        padding-left: 24px;
+                    }
+                }
+
+                & > .last-elem {
+                    position: relative;
+
+                    &::before {
+                        content: " ";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        display: inline;
+                        width: 22px;
+                        border-bottom: 2px dotted #C4C4C4;
+                    }
+                }
+
+                & > a {
+                    font-size: 16px;
+                    color: #C4C4C4;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+
+                & > .active {
+                    color: #EF5B70;
+
+                    &:hover {
+                        color: #EF5B70;
+                    }
+                }
+            }
+        }
+
+        &__nav {
+            & .prev {
+                position: absolute;
+                left: 16px;
+                top: 19px;
+            }
+
+            & .next {
+                position: absolute;
+                right: 16px;
+                top: 19px;
+            }
+        }
+    }
 }
+
 
 .service {
     background-color: #222224;
