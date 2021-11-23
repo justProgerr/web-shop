@@ -286,6 +286,10 @@ ol {
     padding-top: 50px;
     text-align: center;
 
+    &.cart--product {
+        padding-top: 0;
+    }
+
     &__header {
         & h3 {
             font-weight: normal;
@@ -388,17 +392,29 @@ ol {
     }
 
     &__btn a {
-        padding: 15px 40px;
-        display: inline-block;
-        margin-top: 48px;
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 210px;
+        margin: 48px auto 0;
         font-size: 16px;
         line-height: 19px;
         transition: .2s;
+
+        & > svg {
+            fill: #F26376;
+            margin-right: 22px;
+        }
     }
 
     &__btn a:hover {
         background-color: $domin-color;
         color: #fff;
+
+        & svg {
+            fill: #fff;
+        }
     }
 
     &__filter {
@@ -495,7 +511,7 @@ ol {
         }
 
         &__extra {
-            padding: 8px 0;
+            padding: 8px 0 0;
 
             & ul {
                 list-style: none;
@@ -555,6 +571,102 @@ ol {
                         }
                     }          
                 }
+            }
+
+            &.marg--product {
+                margin-top: 55px;
+            }
+        }
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 777px;
+        background-color: #F7F7F7; 
+
+        & .nav {
+            position: absolute;
+            padding: 13px 17px;
+            background-color: rgba(42, 42, 42, 0.15);
+
+            & svg {
+                fill: black;
+            }
+
+            &:hover svg {
+                fill: #F16D7F;
+            }
+        }
+
+        & .prev {
+            left: 0;
+        }
+
+        & .next {
+            right: 0;
+        }
+    }
+
+    &__title {
+        transform: translateY(-64px);
+
+        &__body {
+            display: block;
+            text-align: center;
+            padding: 65px 250px;
+            background-color: #fff;
+            border: 1px solid #EAEAEA;
+
+            & > hr {
+                margin-top: 65px;
+                border: none;
+                background-color: #EAEAEA;
+                height: 1px;
+            }
+        }
+
+        &__top {
+            & h3 {
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 14px;
+                color: #F16D7F;
+                position: relative;
+            }
+
+            & hr {
+                width: 63px;
+                height: 3px;
+                color: #EF5B70;
+                background-color: #EF5B70;
+                border: none;
+                margin: 15px auto 0;
+            }
+
+            & h4 {
+                margin-top: 15px;
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 18px;
+                color: #4D4D4D;
+            }
+
+            & p {
+                margin-top: 50px;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 17px;
+                color: #5E5E5E;
+            }
+
+            & .price {
+                display: inline-block;
+                margin-top: 35px;
+                font-weight: 300;
+                font-size: 24px;
+                color: #EF5B70;
             }
         }
     }
