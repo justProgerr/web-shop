@@ -1,0 +1,64 @@
+.catalog {
+    padding-top: 65px;
+    padding-bottom: 46px;
+
+    &__body {
+        @include box-flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        position: relative;
+        width: 360px;
+        height: 260px;
+        cursor: pointer;
+
+        & img {
+            width: 100%;
+        }
+
+        & p {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 40%;
+            bottom: 40%;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+        }
+
+        & span {
+            font-size: text-big(16px);
+            line-height: 29px;
+            font-weight: bold;
+        }
+
+    }
+
+    &__item:last-child {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    &__item::before {
+        display: block;
+        content: " ";
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background-color: rgba(33, 22, 22, 0.7);
+        transition: .8s;
+    }
+
+    &__item:hover::before {
+        background-color: rgba(33, 22, 22, 0.4);
+        transition: .9s;
+    }
+}
