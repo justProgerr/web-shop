@@ -1,0 +1,27 @@
+.header {
+    background-color: #222;
+
+    & svg {
+        fill: #E8E8E8;
+
+        &:hover {
+            fill: #F16D7F; 
+        }
+    }
+    &__body {
+        @include box-flex;
+        align-items: center;
+    }
+
+    &__left {
+        margin: 18px 0;
+    }
+
+    &__left svg {
+        margin-left: 40px;
+    }
+
+    &__right *+* {
+        margin-left: 33px;
+    }
+}

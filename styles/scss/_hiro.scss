@@ -1,0 +1,17 @@
+.hiro {
+    background-color: #F1E4E6;
+    height: 764px;
+
+    &__body {
+        @include box-flex;
+    }
+
+    &__heading {
+        margin-top: 290px;
+        margin-right: 100px;
+
+        & h1 {
+            border-left: 12px solid $domin-color;
+        }
+    }
+}
