@@ -20,9 +20,13 @@
             top: 16px;
             right: 16px;
             cursor: pointer;
+            transform: rotate(-180deg);
+            transition: .5s ease-out;
 
             &:hover {
                 color: $domin-color; 
+                transform: rotate(180deg);
+                transition: .5s ease-out;
             }
         }
 

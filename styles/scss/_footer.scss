@@ -30,6 +30,7 @@
 
             &:hover svg {
                 fill: #F16D7F;
+                transform: translateY(-5px);
 
                 & .svg-icon {
                     fill: white;
