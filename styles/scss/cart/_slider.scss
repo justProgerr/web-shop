@@ -1,0 +1,29 @@
+&__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 777px;
+    background-color: #F7F7F7; 
+
+    & .nav {
+        position: absolute;
+        padding: 13px 17px;
+        background-color: rgba(42, 42, 42, 0.15);
+
+        & svg {
+            fill: black;
+        }
+
+        &:hover svg {
+            fill: #F16D7F;
+        }
+    }
+
+    & .prev {
+        left: 0;
+    }
+
+    & .next {
+        right: 0;
+    }
+}
