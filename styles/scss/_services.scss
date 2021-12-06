@@ -1,0 +1,31 @@
+.service {
+    background-color: #222224;
+    margin-top: 95px;
+    padding: 104px 0;
+
+    &__body {
+        @include box-flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        text-align: center;
+        width: 360px;
+        height: 134px;
+
+        & h3 {
+            margin-top: 19px;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FBFBFB;
+        }
+
+        & p {
+            margin-top: 16px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FBFBFB;
+        }
+    }
+}

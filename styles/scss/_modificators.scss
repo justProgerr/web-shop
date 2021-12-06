@@ -1,0 +1,21 @@
+.h1--big {
+    font-size: text-big($h1-size);
+    line-height: 58px;
+    font-weight: 900;
+}
+
+.border--pink {
+    border: 1px solid $domin-color;
+}
+
+#page--active {
+    font-weight: bold;
+    color: $domin-color;
+}
+
+.text--pink {
+    color: $domin-color;
+}
+.btn--pink {
+    background-color: $domin-color;
+}

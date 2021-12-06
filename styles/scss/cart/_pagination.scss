@@ -1,0 +1,68 @@
+&__pagination {
+    margin-top: 48px;
+    display: inline-block;
+    position: relative;
+    padding: 15px 16px;
+    border: 1px solid #EBEBEB;
+
+    & > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 28px;
+
+        & > li {
+            display: inline-block;
+
+            & + li {
+                & > a {
+                    padding-left: 24px;
+                }
+            }
+
+            & > .last-elem {
+                position: relative;
+
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    display: inline;
+                    width: 22px;
+                    border-bottom: 2px dotted #C4C4C4;
+                }
+            }
+
+            & > a {
+                font-size: 16px;
+                color: #C4C4C4;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+
+            & > .active {
+                color: #EF5B70;
+
+                &:hover {
+                    color: #EF5B70;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        & .prev {
+            position: absolute;
+            left: 16px;
+            top: 19px;
+        }
+
+        & .next {
+            position: absolute;
+            right: 16px;
+            top: 19px;
+        }
+    }
+}

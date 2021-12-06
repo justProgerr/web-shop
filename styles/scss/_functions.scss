@@ -1,0 +1,3 @@
+@function text-big($fontSize) {
+    @return $fontSize+$fontSize / 2;
+}

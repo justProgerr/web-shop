@@ -1,0 +1,203 @@
+.inCart {
+    padding: 96px 0 128px;
+
+    &__body {
+        @include box-flex;  
+    }
+
+    &__goods {
+        max-width: 850px;
+        width: 100%;
+        
+        &__item {
+            position: relative;
+            width: 650px;
+            height: 306px;
+            background-color: #FFF;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+            & + & {
+                margin-top: 40px;
+            }
+
+            & > .close {
+                font-size: 18px;
+                position: absolute;
+                top: 22px;
+                right: 22px;
+                cursor: pointer;
+                transform: rotate(-180deg);           
+                transition: .5s ease-out;
+
+                &:hover {
+                    font-weight: bold;
+                    color: #EF5B70;
+                    transform: rotate(180deg);                   
+                    transition: .5s ease-out;
+                }
+            }
+        }
+
+        &__control {
+            clear: both;
+            margin-top: 72px;
+            @include box-flex;
+
+            & button {
+                text-transform: uppercase;
+                padding: 17px 40px;
+                font-weight: 300;
+                font-size: 14px;
+                color: #000000;
+                background-color: transparent;
+                border: 1px solid #A4A4A4;
+
+                &:hover {
+                    border:2px solid #B1B1B1;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &__img {
+            float: left;
+        }
+
+        &__content {
+            float: left;
+            padding: 22px 22px 22px 32px;
+
+            & h3 {
+                text-transform: uppercase;
+                font-weight: normal;
+                font-size: 24px;
+                color: #222222;
+            }
+
+            & ul {
+                list-style: none;
+                margin-top: 45px;
+                padding: 0;
+
+                & li {
+                    font-size: 22px;
+                    line-height: 26px;
+                    color: #575757;
+
+                    & > .price {
+                        color: #EF5B70;
+                    }
+
+                    & > span {
+                        color: #6F6E6E;
+                    }
+
+                    & + li {
+                        margin-top: 8px;
+                    }
+
+                    & > input {
+                        text-align: center;
+                        font-size: 18px;
+                        padding: 2px 5px;
+                        margin-left: 25px;
+                        color: #656565;
+                        width: 44px;
+                        border: 1px solid #EAEAEA;
+                        outline: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    &__shipping {
+        width: 360px;
+
+        & h3 {
+            text-transform: uppercase;
+            margin-top: 17px;
+            font-weight: 300;
+            font-size: 16px;
+            color: #222222;
+        }
+
+        & input {
+            width: 100%;
+            margin-top: 20px;
+            padding: 16px 17px;
+            font-weight: 300;
+            font-size: 13px;
+            color: #222222;
+            border: 1px solid #A4A4A4;
+            outline-color: #B1B1B1;
+
+            &::placeholder {
+                color: #B1B1B1;
+            }
+        }
+
+        & button {
+            text-transform: uppercase;
+            margin-top: 23px;
+            padding: 13px 15px;
+            background-color: transparent;
+            border: 1px solid #A4A4A4;
+            font-weight: 300;
+            font-size: 11px;
+            color: #4A4A4A;
+            cursor: pointer;
+
+            &:hover {
+                border:2px solid #B1B1B1;
+                font-weight: bold;
+            }
+        }
+
+        &__payment {
+            padding: 42px;
+            margin-top: 57px;
+            background-color: #F5F3F3;
+            text-align: right;
+
+            & span {
+                margin-left: 25px;
+            }
+
+            & .subTotal {
+                font-size: 11px;
+                color: #4A4A4A;
+            }
+
+            & .grandTotal {
+                margin-top: 12px;
+                font-weight: 300;
+                color: #222222;
+
+                & span {
+                    font-weight: bold;
+                    color: #F16D7F;
+                }
+            }
+
+            & hr {
+                height: 1px;
+                border: none;
+                background-color: #E2E2E2;
+                margin-top: 22px;
+            }
+
+            & .cart__btn a {
+                text-transform: uppercase;
+                width: 100%;
+                margin-top: 17px;
+                font-weight: 300;
+                color: #fff;
+
+                &:hover {
+                    background-color: #e0596b;
+                }
+            }
+        }
+    }
+}
