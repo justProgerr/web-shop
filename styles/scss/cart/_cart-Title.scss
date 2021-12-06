@@ -4,12 +4,13 @@
     &__body {
         display: block;
         text-align: center;
-        padding: 65px 250px;
+        padding: 65px 0;
         background-color: #fff;
         border: 1px solid #EAEAEA;
 
         & > hr {
-            margin-top: 65px;
+            width: 642px;
+            margin: 65px auto 0;
             border: none;
             background-color: #EAEAEA;
             height: 1px;

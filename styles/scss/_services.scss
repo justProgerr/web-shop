@@ -5,6 +5,7 @@
 
     &__body {
         @include box-flex;
+        flex-wrap: wrap;
     }
 
     &__item {

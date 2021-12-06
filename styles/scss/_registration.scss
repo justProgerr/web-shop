@@ -77,7 +77,8 @@
         }
 
         &__perks {
-            width: 652px;
+            max-width: 652px;
+            width: 100%;
 
             & h3 {
                 text-transform: uppercase;
@@ -93,21 +94,20 @@
             }
 
             & ul {
-                padding: 0;
+                padding: 0 22px;
                 margin-top: 22px;
                 font-weight: 300;
                 font-size: 24px;
                 list-style-image: url('../../images/yes.svg');
-                list-style-position: inside;
 
                 & li {
+                    padding-left: 22px;
+
                     & + li {
                         margin-top: 16px;
                     }
 
-                    & span {
-                        margin-left: 23px;
-                    }
+                    
                 }
             }
         }

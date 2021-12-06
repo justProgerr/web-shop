@@ -3,14 +3,26 @@
     padding-bottom: 46px;
 
     &__body {
-        @include box-flex;
-        flex-wrap: wrap;
+        & .block--nowrap {
+            @include box-flex;
+            flex-wrap: nowrap;
+        }
+
+        & > .catalog__item {
+            min-width: 736px;
+            max-width: 1140px;
+            width: 100%;
+            max-height: 180px;
+            margin-top: 30px;
+        }
     }
 
     &__item {
         position: relative;
-        width: 360px;
-        height: 260px;
+        min-width: 232px;
+        max-width: 360px;
+        // width: 100%;
+        flex-grow: 1;
         cursor: pointer;
 
         & img {
@@ -35,13 +47,6 @@
             line-height: 29px;
             font-weight: bold;
         }
-
-    }
-
-    &__item:last-child {
-        width: 100%;
-        height: 180px;
-        margin-top: 30px;
     }
 
     &__item::before {

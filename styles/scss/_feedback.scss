@@ -1,11 +1,12 @@
 .feedback {
     position: relative;
     background-image: url('../images/bg-feedback.jpg');
-    background-size: 100%;
-    height: 448px;
+    background-size: cover;
+    min-height: 448px;
 
     &__body {
         background-color: rgba(244, 244, 244, 0.7);
+        min-height: 448px;
         height: 100%;
 
         & > .container {
