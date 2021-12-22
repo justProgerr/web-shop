@@ -1,0 +1,163 @@
+&__filter {
+    position: relative;
+
+    &__basic {
+        text-align: initial;
+
+        & > details { 
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 16px;
+
+            & > summary {
+                text-transform: uppercase;
+                list-style: none;
+                font-weight: 600;
+                font-size: 14px;
+                color: #000000;
+                cursor: pointer;
+            }
+
+            & svg {
+                width: 15px;
+                height: 10px;
+                fill: #000;
+                margin-left: 11px;
+            }
+
+            &[open] {
+                z-index: 1;
+                background: #FFFFFF;
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                width: 360px;
+
+                & > summary {
+                    position: relative;
+                    color: #EF5B70;
+
+                    & > svg {
+                        fill: #EF5B70; 
+                    }
+                }
+
+            }
+
+            & details {
+                & > summary {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    list-style: none;
+                    margin-top: 18px;
+                    padding: 12px 16px 15px;
+                    color: #6F6E6E;
+                    border-left: 5px solid #EF5B70;
+                    border-bottom: 1px solid #EBEBEB;
+                    cursor: pointer;
+
+                    &:hover {
+                        border-bottom: 1px solid #EF5B70;
+                        font-weight: bold;
+                    }
+                }
+
+                &[open] {
+                    & > summary {
+                        color: #EF5B70;
+                        font-weight: bold;
+                        border-bottom: 1px solid #EF5B70;
+                    }
+                }
+
+                & > ul {
+                    padding: 24px 16px; 
+
+                    & li {
+                        & + li {
+                            margin-top: 11px;
+                        }
+
+                        & > a {
+                            text-decoration: none;
+                            font-size: 14px;
+                            color: #6F6E6E;
+
+                            &:hover {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__extra {
+        padding: 8px 0 0;
+
+        & ul {
+            list-style: none;
+
+            & > li {
+                display: inline-block;
+            }
+
+            & details {
+                position: relative;
+
+                & > summary {
+                    list-style: none;
+                    padding: 9px 19px 9px 9px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: #6F6E6E;
+
+                    &:hover {
+                        color: #000;
+                    }
+
+                    & > svg {
+                        margin-left: 10px;
+                    }
+                    
+                }
+
+                & > .details-body {
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    left: 0;
+                    right: 0; 
+                    background-color: #FFFFFF;
+                    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                    padding: 9px;
+                    z-index: 1;
+
+                    & input {
+                        margin-right: 9px;
+                    }
+
+                    & > label {
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 14px;
+
+                        &:hover {
+                            
+                            font-weight: bold;
+                        }
+
+                        & + label {
+                            margin-top: 9px;
+                        }
+                    }
+                }          
+            }
+        }
+
+        &.marg--product {
+            margin-top: 55px;
+        }
+    }
+}

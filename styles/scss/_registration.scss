@@ -1,0 +1,115 @@
+.registration {
+    padding: 64px 0 96px;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 22px;
+    }
+
+    &__userData {
+        width: 360px;
+
+        & h3 {
+            font-weight: 300;
+            font-size: 16px;
+            color: #222222;
+        }
+
+        & .gender {
+            margin: 33px 0;
+        }
+
+        & label {
+            margin-right: 20px;
+            font-weight: 300;
+            font-size: 11px;
+            color: #000000;
+        }
+
+        & input {
+            margin-right: 10px;
+        }
+
+        & form > input {
+            width: 100%;
+            display: block;
+            margin-top: 20px;
+            font-weight: 300;
+            font-size: 13px;
+            color: #000;
+            padding: 16px 17px;
+            border: 1px solid #A4A4A4;
+            outline-color: #B1B1B1;
+
+            &::placeholder {
+                color: #B1B1B1;
+            }
+        }
+
+        & p {
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 13px;
+            color: #B1B1B1;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        
+        & button {
+            text-transform: uppercase;
+            margin-top: 40px;
+            border: none;
+            padding: 17px 30px;
+            font-size: 14px;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                background-color: #E05C6E;
+            }
+        }
+
+        & svg {
+            margin-left: 20px;
+        }
+    }
+
+    &__perks {
+        max-width: 652px;
+        width: 100%;
+
+        & h3 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 24px;
+            color: #000000;
+        }
+
+        & p {
+            margin-top: 22px;
+            font-weight: 300;
+            font-size: 24px;
+        }
+
+        & ul {
+            padding: 0 22px;
+            margin-top: 22px;
+            font-weight: 300;
+            font-size: 24px;
+            list-style-image: url('../../images/yes.svg');
+        }
+
+        & li {
+            padding-left: 22px;
+
+            & + li {
+                margin-top: 16px;
+            }
+        }
+    }
+}

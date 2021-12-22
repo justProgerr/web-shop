@@ -1,0 +1,42 @@
+.slider-prod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 0;
+    background-color: #F7F7F7; 
+
+    & .container {
+        padding: 0 142px;
+    }
+
+    &__img {
+        min-width: 466px;
+        width: 100%;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    & .nav {
+        position: absolute;
+        padding: 13px 17px;
+        background-color: rgba(42, 42, 42, 0.15);
+
+        & svg {
+            fill: black;
+        }
+
+        &:hover svg {
+            fill: #F16D7F;
+        }
+    }
+
+    & .prev {
+        left: 0;
+    }
+
+    & .next {
+        right: 0;
+    }
+}

@@ -1,0 +1,11 @@
+@mixin flex-content--left {
+    justify-content: start;
+}
+
+@mixin flex-content--center {
+    justify-content: center;
+}
+
+@mixin display--none {
+    display: none;
+}

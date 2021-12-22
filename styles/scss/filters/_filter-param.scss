@@ -1,0 +1,54 @@
+.filter-param {
+    padding: 8px 0 0;
+
+    & li {
+        display: inline-block;
+    }
+
+    & details {
+        position: relative;
+    }
+
+    & summary {
+        padding: 9px 19px 9px 9px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #6F6E6E;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    & svg {
+        margin-left: 10px;
+    }
+
+    &__list {
+        text-align: initial;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0; right: 0; 
+        background-color: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        padding: 9px;
+        z-index: +1;
+
+        & input {
+            margin-right: 9px;
+        }
+
+        & > label {
+            font-size: 14px;
+
+            &:hover {
+                font-weight: bold;
+            }
+
+            & + label {
+                margin-top: 9px;
+            }
+        }
+    }   
+}

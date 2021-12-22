@@ -1,0 +1,16 @@
+.heading {
+    background-color: #F8F3F4;
+
+    & h2 {
+        text-transform: uppercase;
+        font-weight: normal;
+        color: #F16D7F;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0;
+    }
+}
