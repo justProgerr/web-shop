@@ -1,4 +1,4 @@
-let menu = document.getElementById('main__menu');
+let menu = document.getElementById('menu');
 let burger = document.getElementById('burger');
 let close = document.getElementById('close');
 let regIcon = document.getElementById('regIcon');

@@ -1,0 +1,29 @@
+.h1--big {
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 900;
+}
+
+#page--active {
+    font-weight: bold;
+    color: $color_pink-red;
+}
+
+.text--pink-red {
+    color: $color_pink-red;
+}
+
+.text--light-red {
+    color: $color_light-red;
+}
+
+.border--light-red {
+    border-color: $color_light-red;
+}
+.btn--pink {
+    background-color: $color_pink-red;
+}
+
+.width--full {
+    width: 100% !important;
+}
